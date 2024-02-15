@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Add a Movie";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Got a movie to add?</h2>
+    <p><h4>Use this form to insert a movie into the JHFC.</h4></p>
+    <br />
+    <fieldset style="text-align: left; border: solid 1px black; padding: 20px; width: 350px; margin: 0 auto">
+        <form method="post">
+            <label>Title:</label>
+            <input type="text" /><br />
+            <label>Year:</label>
+            <input type="text" /><br />
+            <label>Category:</label>
+            <input type="text" /><br />
+            <label>Director:</label>
+            <input type="text" /><br />
+            <label>Rating:</label>
+            <select>
+                <option value="G">G</option>
+                <option value="PG">PG</option>
+                <option value="PG-13">PG-13</option>
+                <option value="R">R</option>
+            </select><br />
+            <label>Edited:</label>
+            <input type="checkbox" /><br />
+            <label>Lent To:</label>
+            <input type="text" /><br />
+            <label>Notes:</label>
+            <input type="text" /><br />
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+</div>

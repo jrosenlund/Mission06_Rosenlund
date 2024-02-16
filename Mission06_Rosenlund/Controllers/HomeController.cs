@@ -6,6 +6,12 @@ namespace Mission06_Rosenlund.Controllers
 {
     public class HomeController : Controller
     {
+        private MovieContext _context;
+        public HomeController(MovieContext temp) // Constructor
+        {
+            _context = temp;
+        }
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -23,9 +29,19 @@ namespace Mission06_Rosenlund.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult AddMovie()
         {
             return View();
+        }
+
+        [HttpPost] // Form submission
+        public IActionResult AddMovie(Movie movie)
+        {
+            _context.Movies.Add(movie); // Add to the database
+            _context.SaveChanges();
+
+            return View("AddMovie");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

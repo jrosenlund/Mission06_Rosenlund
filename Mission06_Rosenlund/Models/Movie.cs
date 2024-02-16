@@ -11,7 +11,7 @@ namespace Mission06_Rosenlund.Models
         public string Category { get; set; }
         public string Director { get; set; }
         public string Rating { get; set; }
-        public int? Edited { get; set; }
+        public string? Edited { get; set; }
         public string? Lent_To { get; set; }
         [Range(0, 25)]
         public string? Notes { get; set; }

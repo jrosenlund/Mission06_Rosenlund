@@ -22,6 +22,11 @@ namespace Mission06_Rosenlund.Controllers
             return View();
         }
 
+        public IActionResult Confirmation()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult AddMovie()
         {
@@ -34,7 +39,7 @@ namespace Mission06_Rosenlund.Controllers
             _context.Movies.Add(movie); // Add to the database
             _context.SaveChanges();
 
-            return View("AddMovie");
+            return View("Confirmation");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

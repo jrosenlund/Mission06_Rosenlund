@@ -17,18 +17,18 @@ namespace Mission06_Rosenlund.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult About() // Get to know Joel page
         {
             return View();
         }
 
-        public IActionResult Confirmation()
+        public IActionResult Confirmation() // Submission confirmation
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult AddMovie()
+        public IActionResult AddMovie() // Form page
         {
             return View();
         }

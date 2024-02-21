@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "JHFC";
+}
+
+@model List<Movie>
+
+<table>
+
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Year</td>
+            <td>Category</td>
+            <td>Director</td>
+            <td>Rating</td>
+            <td>Edited</td>
+            <td>Lent To</td>
+            <td>Copied to Plex</td>
+            <td>Notes</td>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var x in Model) {
+
+        <tr>
+            <td>@x.Title</td>
+            <td>@x.Year</td>
+            <td>@x.Category</td>
+            <td>@x.Director</td>
+            <td>@x.Rating</td>
+            <td>@x.Edited</td>
+            <td>@x.LentTo</td>
+            <td>@x.CopiedToPlex</td>
+            <td>@x.Notes</td>
+        </tr>
+
+    }
+    </tbody>
+</table>

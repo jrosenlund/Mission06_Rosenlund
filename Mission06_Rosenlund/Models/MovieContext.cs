@@ -9,5 +9,8 @@ namespace Mission06_Rosenlund.Models
         }
 
         public DbSet<Movie> Movies { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
     }
 }

@@ -42,6 +42,14 @@ namespace Mission06_Rosenlund.Controllers
             return View("Confirmation");
         }
 
+        public IActionResult Collection()
+        {
+            var movies = _context.Movies
+                .OrderBy(x => x.Title).ToList();
+
+            return View(movies);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
